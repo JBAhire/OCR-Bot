@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 @app.route("/sms", methods=['GET', 'POST'])
 def sms():
-    bucket_name="textract-console-us-east-1-6375b349-b720-4339-99ab-c4a951ea5a70"
+    bucket_name="add your bucket name"
     resp = MessagingResponse()
     filename = request.values['MessageSid'] + '.jpg'
     with open(filename, 'wb') as f:
